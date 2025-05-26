@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400&display=swap');
+
+/* Estilo do body da página de login */
+.body-login {
+    font-family: 'Libre Caslon Text', serif;
+    background-image: url('Photo\ by\ Codioful\ \(formerly\ Gradienta\)\ on\ Pexels.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do body da página do painel */
+.painel-body {
+    font-family: 'Libre Caslon Text', serif;
+    background-color: #eaf4ea; /* verde claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    background: none;
+}
+
+/* Logo */
+.logo-container {
+    padding: 20px;
+    background-color: transparent;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+}
+
+/* Container geral */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    color: #32672C;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    width: 94%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    border-color: #80ffb0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-button {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #32672C;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.login-button:hover {
+    background-color: white;
+    color: #52934b;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.descricao-projeto {
+    font-size: 22px;
+    font-style: italic;
+    max-width: 750px;
+    line-height: 1.8;
+    padding: 20px;
+    background-image: url('descricao.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    color: white;
+    z-index: 10;
+    flex-basis: 50%;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #32672C;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5000;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.painel-container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.painel-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #32672C;
+}
+
+/* Estilo dos dados do painel */
+.dados {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+#grafico {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
