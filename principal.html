@@ -29,6 +29,7 @@
 
         .logo {
             height: 60px;
+            width: auto;
         }
 
         nav a {
@@ -41,7 +42,7 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background-image: url("Wallpaper.jpg");
+            background-image: url("Wallpaper.jpg"); /* Certifique-se de que esta imagem existe */
             background-size: cover;
             background-position: center;
             color: white;
@@ -90,6 +91,37 @@
             line-height: 1.6;
         }
 
+        /* Estilos para a seção "Sobre" com imagem */
+        .sobre-content {
+            display: flex;
+            flex-direction: column; /* Padrão para mobile */
+            align-items: center;
+            gap: 30px; /* Espaçamento entre texto e imagem */
+            text-align: left; /* Alinha o texto à esquerda dentro do flex item */
+        }
+
+        .biodigestor-image {
+            max-width: 100%; /* Garante que a imagem seja responsiva */
+            height: auto;
+            border-radius: 12px; /* Cantos arredondados para a imagem */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media query para telas maiores (desktop) */
+        @media (min-width: 768px) {
+            .sobre-content {
+                flex-direction: row; /* Coloca texto e imagem lado a lado */
+                text-align: left;
+            }
+            .sobre-content .text-block {
+                flex: 1; /* Permite que o bloco de texto ocupe o espaço disponível */
+            }
+            .sobre-content .image-block {
+                flex: 0 0 40%; /* A imagem ocupa 40% da largura */
+                max-width: 40%;
+            }
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -116,14 +148,25 @@
 </section>
 
 <section class="section" id="sobre">
-    <h2>O que é o Ákaru?</h2>
-    <p>Escrever aqui o que é o Akaru, talvez a historia, signifcado do nome, e o que ele vai ajudar para as pessoas</p>
+    <h2>O que é Ákaru?</h2>
+    <div class="sobre-content">
+        <div class="text-block">
+            <p>O Akaru é um projeto inovador focado na implementação de biodigestores, uma tecnologia que transforma resíduos orgânicos em biogás (uma fonte de energia renovável) e biofertilizante. Embora o nome "Akaru" não possua um significado direto universalmente reconhecido para a tecnologia em si, ele pode ser uma alusão ao "karau" (boi/búfalo em Tétum), remetendo à ideia de um animal de trabalho, que gera recursos e sustento, assim como o biodigestor transforma resíduos em algo útil.</p>
+        </div>
+        <div class="image-block">
+            <img src="green-energy.jpg" alt="Imagem de um Biodigestor" class="biodigestor-image">
+        </div>
+    </div>
 </section>
 
 <section class="section" id="como-funciona">
     <h2>Como Funciona?</h2>
-    <p>Por aqui os materiais utilizados e todo seu funcionamento por completo</p>
+    <p>É um ciclo virtuoso que transforma o que era problema (resíduo) em soluções valiosas (energia e fertilizante), alinhando-se perfeitamente com os princípios da economia circular e sustentabilidade.</p>
 </section>
+
+<footer>
+    <p>&copy; 2023 Ákaru. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>

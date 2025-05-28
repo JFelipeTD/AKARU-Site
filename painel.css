@@ -1,4 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400&display=swap');
+
+.body-login {
     font-family: 'Libre Caslon Text', serif;
     background-image: url('hexcolor.jpg');
     background-size: cover;
@@ -7,7 +9,18 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
+.painel-body {
+    font-family: 'Libre Caslon Text', serif;
+    background-color: #d6f5d6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -16,39 +29,142 @@ body {
     z-index: 1000;
     padding: 20px;
     background: none;
-}
-
-/* Remover logo */
-.logo-container {
-    display: none;
-}
-
-.painel-container {
-    padding-top: 80px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: block;
+    padding: 0;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.main-nav a {
+    color: #32672C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #52934b;
+}
+
+.main-content {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 30px;
+    height: 100vh;
 }
 
-.title {
-    font-size: 30px;
-    margin-bottom: 20px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
     color: #32672C;
 }
 
-.dados {
+.title {
+    font-size: 24px;
     margin-bottom: 20px;
-    font-size: 18px;
-    color: #333;
+    text-align: center;
 }
 
-#grafico {
-    border-radius: 12px;
+input {
+    width: 94%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    border-color: #80ffb0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-button {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #32672C;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.login-button:hover {
     background-color: white;
-    padding: 10px;
+    color: #52934b;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: white;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.descricao-projeto {
+    font-size: 22px;
+    font-style: italic;
+    max-width: 750px;
+    line-height: 1.8;
+    padding: 20px;
+    background-image: url('descricao.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    color: white;
+    z-index: 10;
+    flex-basis: 50%;
 }
 
 .footer-bar {
@@ -61,38 +177,45 @@ body {
     z-index: 5000;
 }
 
-.painel-body {
-    background-image: none;
-    background-color: #f0fff0;
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
 }
 
-.painel-title {
-    color: #32672C;
-}
-
-.painel-body {
-    background-color: #d6f5d6;
-    margin: 0;
-    padding: 0;
-    font-family: 'Libre Caslon Text', serif;
-}
-
-/* Container principal do painel */
 .painel-container {
-    padding: 40px 20px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
     max-width: 900px;
     margin: 0 auto;
+    margin-top: 150px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 500px; /* Altura máxima do container reduzida */
 }
 
-/* Título do painel */
 .painel-title {
-    color: #32672C;
-    font-size: 32px;
-    text-align: center;
+    font-size: 28px;
     margin-bottom: 30px;
+    color: #32672C;
 }
 
-/* Estilo dos dados */
+.dados {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+}
+
 .dados p {
     font-size: 20px;
     color: #333;
@@ -101,7 +224,63 @@ body {
 
 #grafico {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 10px;
+    padding: 10px; /* Padding do gráfico reduzido */
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .main-nav {
+        margin-top: 0;
+        padding-right: 10px;
+        gap: 15px;
+    }
+    .logo {
+        height: 50px;
+    }
+    .painel-container {
+        padding: 20px;
+        margin-top: 100px;
+        max-height: none;
+    }
+    .painel-title {
+        font-size: 24px;
+    }
+    .dados p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-nav {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+        padding-right: 0;
+    }
+    .logo {
+        height: 40px;
+    }
+    .painel-title {
+        font-size: 20px;
+    }
+    .dados {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dados p {
+        width: 100%;
+    }
 }

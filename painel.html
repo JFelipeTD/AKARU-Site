@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Painel do Biodigestor</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Painel do Biodigestor</title>
+    <link rel="stylesheet" href="painel.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="painel-body">
-  <main class="painel-container">
-    <h1 class="title painel-title">Painel do Biodigestor</h1>
+    <header class="header">
+        <a href="principal.html" class="logo-link">
+            <div class="logo-container">
+                <img src="nomeAkaru.png" alt="Ákaru Logo" class="logo">
+            </div>
+        </a>
+        <nav class="main-nav">
+            <a href="sobre.html">Sobre</a>
+            <a href="como_funciona.html">Como Funciona</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
 
-    <div class="dados">
-      <p><strong>Temperatura:</strong> <span id="temperatura">--</span></p>
-      <p><strong>Umidade:</strong> <span id="umidade">--</span></p>
-      <p><strong>Gás Gerado:</strong> <span id="gas-gerado">--</span></p>
-    </div>
-    
-    <canvas id="grafico" width="600" height="300"></canvas>
-  </main>
+    <main class="painel-container">
+        <h1 class="title painel-title">Painel do Biodigestor</h1>
 
-  <footer class="footer-bar"></footer>
-  <script src="painel.js"></script>
+        <div class="dados">
+            <p><strong>Temperatura:</strong> <span id="temperatura">--</span></p>
+            <p><strong>Umidade:</strong> <span id="umidade">--</span></p>
+            <p><strong>Gás Gerado:</strong> <span id="gas-gerado">--</span></p>
+        </div>
+        
+        <p style="text-align: center; margin-top: 0; margin-bottom: 10px; font-size: 1.1em; color: #555;">Os dados obtidos sobre o seu biodigestor</p>
+        <canvas id="grafico"></canvas>
+
+        <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #333;">
+            Resumo dos resultados: O desempenho do seu biodigestor tem mostrado uma tendência de crescimento, com flutuações esperadas. Os dados indicam uma operação consistente.
+        </p>
+        <p style="text-align: center; font-size: 0.9em; color: #666;">
+            E-mail cadastrado: cliente@akaru.com
+        </p>
+    </main>
+
+    <footer class="footer-bar"></footer>
+    <script src="painel.js"></script>
 </body>
 </html>
